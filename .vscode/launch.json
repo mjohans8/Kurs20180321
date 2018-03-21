@@ -7,8 +7,7 @@
             "name": "localhost",
             "server": "http://localhost",
             "serverInstance": "DynamicsNAV110",
-            "authentication": "Windows",
-            "startupObjectId": 22
+            "authentication": "Windows"
         }
     ]
 }
