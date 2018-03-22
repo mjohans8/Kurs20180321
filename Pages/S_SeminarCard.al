@@ -4,7 +4,6 @@ page 123456701 "Seminar Card"
 {
     PageType = Card;
     SourceTable = Seminar;
-    UsageCategory = Tasks;
     layout
     {
         area(content)

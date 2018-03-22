@@ -321,7 +321,8 @@ table 123456710 "Seminar Registration Header"
         SeminarRegLine.RESET;
         SeminarRegLine.SETRANGE("Document No.", "No.");
         SeminarRegLine.SETRANGE(Registered, true);
-        if SeminarRegLine.FIND('-') then
+        if NOT SeminarRegLine.IsEmpty() then
+        //if SeminarRegLine.FIND('-') then
             ERROR(
             Text001,
             SeminarRegLine.TableCaption,
