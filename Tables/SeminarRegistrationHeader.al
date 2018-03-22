@@ -11,7 +11,6 @@ table 123456710 "Seminar Registration Header"
         field(1; "No."; Code[20])
         {
             Caption = 'No.';
-
             trigger OnValidate();
             begin
                 if "No." <> xRec."No." then begin
@@ -199,16 +198,16 @@ table 123456710 "Seminar Registration Header"
                     SeminarRegLine.SetRange("Document No.", "No.");
                     SeminarRegLine.SetRange(Registered, false);
                     if SeminarRegLine.FindSet(false, false) then
-                    if Confirm(Text005, false,
-                         FieldCaption("Seminar Price"),
-                         SeminarRegLine.TableCaption)
-                    then begin
-                        repeat
-                        SeminarRegLine.VALIDATE("Seminar Price", "Seminar Price");
-                        SeminarRegLine.modify;
-                        until SeminarRegLine.NEXT = 0;
-                        modify;
-                    end;
+                        if Confirm(Text005, false,
+                             FieldCaption("Seminar Price"),
+                             SeminarRegLine.TableCaption)
+                        then begin
+                            repeat
+                            SeminarRegLine.VALIDATE("Seminar Price", "Seminar Price");
+                            SeminarRegLine.modify;
+                            until SeminarRegLine.NEXT = 0;
+                            modify;
+                        end;
                 end;
             end;
         }
@@ -322,7 +321,7 @@ table 123456710 "Seminar Registration Header"
         SeminarRegLine.SETRANGE("Document No.", "No.");
         SeminarRegLine.SETRANGE(Registered, true);
         if NOT SeminarRegLine.IsEmpty() then
-        //if SeminarRegLine.FIND('-') then
+            //if SeminarRegLine.FIND('-') then
             ERROR(
             Text001,
             SeminarRegLine.TableCaption,
