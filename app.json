@@ -20,5 +20,6 @@
   "idRange": {
     "from": 123456700,
     "to": 123456799
-  }
+  },
+  "showMyCode": true
 }

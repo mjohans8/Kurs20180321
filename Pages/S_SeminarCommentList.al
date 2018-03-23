@@ -4,7 +4,6 @@ page 123456707 "Seminar Comment List"
     Editable = false;
     PageType = List;
     SourceTable = "Seminar Comment Line";
-    UsageCategory = Tasks;
     layout
     {
         area(content)
