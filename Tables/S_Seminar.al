@@ -65,10 +65,8 @@ table 123456701 Seminar
             TableRelation = "Gen. Product Posting Group";
             trigger OnValidate();
             begin
-                if (xRec."Gen. Prod. Posting Group"<>
-                "Gen. Prod. Posting Group") then begin
-                if GenProdPostingGroup.ValidateVatProdPostingGroup
-                (GenProdPostingGroup,"VAT Prod. Posting Group") then
+                if (xRec."Gen. Prod. Posting Group"<>"Gen. Prod. Posting Group") then begin
+                if GenProdPostingGroup.ValidateVatProdPostingGroup(GenProdPostingGroup,"Gen. Prod. Posting Group") then
                 Validate("VAT Prod. Posting Group",
                 GenProdPostingGroup."Def. VAT Prod. Posting Group");
                 end;
